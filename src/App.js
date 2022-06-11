@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./components/Home";
+import TopNavbar from "./components/TopNavbar";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Overview from "./components/Overview";
+import Taals from "./components/Taals";
+import Practical from "./components/Practical";
+import Exam from "./components/Exam";
+import Auth from "./components/Auth";
+import Theory from "./components/Theory";
+import Slider from "./components/Slider";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <TopNavbar />
+      <Auth />
+      <Routes>
+        <Route
+          exact
+          path="/"
+          element={
+            <Home />
+          }
+        ></Route>
+        <Route exact path="/overview" element={<Overview />} />
+        <Route exact path="/taals" element={<Taals />} />
+        <Route exact path="/practical" element={<Practical />} />
+        <Route exact path="/exam-prep" element={<Exam />} />
+        <Route exact path="/auth" element={<Auth />} />
+        <Route exact path="/theory" element={<Theory />} />
+        <Route exact path="/slider" element={<Slider />} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,41 @@
+.header {
+  background-color: #8a5623;
+  font-family: "Abhaya Libre", serif;
+  text-align: center;
+  padding: 20px;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.header h1 {
+  font-size: 5.5rem;
+}
+.header h1::before {
+  content: ".....  ";
+  position: relative;
+  top: -11px;
+}
+.header h1::after {
+  content: "  .....";
+  position: relative;
+  top: -11px;
+}
+.description {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.description::before {
+  content: "__________________  ";
+  position: relative;
+  top: -6px;
+}
+.description::after {
+  content: "  __________________";
+  position: relative;
+  top: -6px;
+}
+.home{
+  height: 93vh;
+}

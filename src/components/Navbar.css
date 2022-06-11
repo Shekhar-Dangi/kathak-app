@@ -1,0 +1,29 @@
+.navbar,
+.mainNavbar {
+  background-color: #a6442d;
+  padding: 15px;
+  font-weight: 600;
+  flex: 0.05;
+  align-items: center;
+  height: 7vh;
+  border-bottom: 2px solid white;
+}
+.mainNavbar > ul {
+  display: flex;
+  justify-content: center;
+}
+.navbar > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.navbar li,
+.mainNavbar li {
+  list-style-type: none;
+  margin: 0 10px;
+  color: white;
+  font-size: 2rem;
+}
+.navbar a,
+.mainNavbar a {
+  font-size: 2rem;
+}

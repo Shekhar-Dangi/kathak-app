@@ -1,0 +1,15 @@
+.container {
+  background: url("./images/home.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 66vh;
+}
+.container_content {
+  background: rgba(166, 68, 45, 0.78);
+  padding: 60px;
+  text-align: center;
+}
+.container_content h1 {
+  font-size: 6rem;
+}

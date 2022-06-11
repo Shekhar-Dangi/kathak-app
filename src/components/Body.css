@@ -1,0 +1,23 @@
+.heading {
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 41px;
+  margin: 13px 0;
+}
+
+main {
+  padding: 20px;
+}
+.paragraph {
+  margin: 13px 0;
+  font-size: 2rem;
+  font-family: "Abhaya Libre";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 3rem;
+}
+strong {
+  font-size: 2rem;
+}
