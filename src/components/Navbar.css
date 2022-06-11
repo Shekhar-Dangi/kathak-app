@@ -27,3 +27,16 @@
 .mainNavbar a {
   font-size: 2rem;
 }
+.userDetails{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.userDetails p, .userDetails i{
+  margin: 0 10px;
+  font-size: 1.6rem;
+}
+.userDetails i:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
