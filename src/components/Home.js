@@ -19,8 +19,8 @@ const Home = () => {
       <MainNavbar />
       <div class="container">
         <div class="container_content">
-          <h1>DANCE IS EVERYWHERE</h1>
-          <a class="resetLink btn" onClick={showForm}>Start Learning</a>
+          <h1>UTILIZE OUR RESOURCES! <br />this website works for all, students or teachers! </h1>
+          
         </div>
       </div>
     </div>
