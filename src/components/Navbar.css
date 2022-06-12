@@ -33,7 +33,7 @@
 .userDetails {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: space-between;
   justify-content: center;
 }
 .userDetails p,

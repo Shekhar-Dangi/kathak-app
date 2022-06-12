@@ -1,13 +1,5 @@
-import { auth, db } from "../firebase";
-import {
-  getDocs,
-  setDoc,
-  doc,
-  collection,
-  updateDoc,
-  arrayUnion,
-  arrayRemove,
-} from "firebase/firestore";
+import {  db } from "../firebase";
+import { doc, updateDoc, arrayUnion, arrayRemove } from "firebase/firestore";
 
 const addPost = async (post) => {
   const c = doc(db, "posts", "data");

@@ -5,6 +5,7 @@ import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { query, collection, where, doc } from "firebase/firestore";
+import { Link } from "react-router-dom";
 import { db } from "../firebase";
 import Auth from "./Auth";
 const TopNavbar = () => {
@@ -32,7 +33,11 @@ const TopNavbar = () => {
             <ul>
               <li>{user.email}</li>
               <li>{room?.data()?.school}</li>
-              <li>{room?.data()?.level}</li>
+              {room?.data()?.role === "Student" ? (
+                <li>{room?.data()?.level}</li>
+              ) : (
+                ""
+              )}
               <li>{room?.data()?.role}</li>
               <li
                 onClick={() => {
@@ -49,13 +54,17 @@ const TopNavbar = () => {
 
         <ul>
           {user ? (
-            <div
-              onClick={() => {
-                show("dropdown");
-              }}
-              className="userDetails"
-            >
-              <i className="fa-solid fa-bars userDetails_icon"></i>
+            <div className="userDetails">
+              <Link to="/chat">
+                <i class="fa-solid fa-message userDetails_icon"></i>
+              </Link>
+
+              <i
+                onClick={() => {
+                  show("dropdown");
+                }}
+                className="fa-solid fa-bars userDetails_icon"
+              ></i>
             </div>
           ) : (
             <>

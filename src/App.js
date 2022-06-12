@@ -12,6 +12,7 @@ import Overview from "./components/Overview";
 import Taals from "./components/Taals";
 import Practical from "./components/Practical";
 import Exam from "./components/Exam";
+import Chat from "./components/Chat";
 import Auth from "./components/Auth";
 import Theory from "./components/Theory";
 import Slider from "./components/Slider";
@@ -43,6 +44,7 @@ function App() {
         <Route exact path="/auth" element={<Auth />} />
         <Route exact path="/theory" element={<Theory />} />
         <Route exact path="/notice" element={<Notice />} />
+        <Route exact path="/chat" element={<Chat />} />
         <Route
           exact
           path="/util"
@@ -57,6 +59,17 @@ function App() {
               <Navigate to="/" />
             )
           }
+        />
+        <Route
+          exact
+          path="/notice"
+          element={user ? <Notice /> : <Navigate to="/" />}
+        />
+     
+        <Route
+          exact
+          path="/chat"
+          element={user ? <Chat /> : <Navigate to="/" />}
         />
       </Routes>
     </Router>
