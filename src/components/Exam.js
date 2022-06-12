@@ -40,7 +40,7 @@ const Exam = () => {
             "Junior Diploma Study Guide(1st year)",
             "Senior Diploma 1 Study Guide(2nd year)",
             "Senior Diploma 2 Study Guide(3rd year)",
-            "Visharad 1 Study Guide(4th year)]}",
+            "Visharad 1 Study Guide(4th year)",
           ]}
           linked={[0, 1, 2, 3, 4, 5, 6]}
         />
