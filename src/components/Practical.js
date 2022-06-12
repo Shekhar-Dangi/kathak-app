@@ -35,7 +35,7 @@ const Practical = () => {
         <List
           heading="Beginner"
           list={[
-            "Bole Chart on Teentaa",
+            "Bole Chart on Teentaal",
             "Specific Handwritten Boles from Teentaal Bole Chart",
           ]}
           linked={[0, 1]}
@@ -49,7 +49,7 @@ const Practical = () => {
           linked={[2, 3]}
         />
         <List
-          heading="Intermediate"
+          heading="Advanced"
           list={[
             "Bole Chart on Ektaal",
             "Specific Handwritten Boles from Ektaal Bole Chart",
