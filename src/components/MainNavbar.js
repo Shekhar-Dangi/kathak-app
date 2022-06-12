@@ -1,8 +1,11 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
 
 const MainNavbar = () => {
+  const [user] = useAuthState(auth);
   return (
     <div className="mainNavbar">
       <ul>
