@@ -41,12 +41,24 @@ const MainNavbar = () => {
             EXAM PREPARATION
           </Link>
         </li>
-        <li>|</li>
-        <li>
-          <Link className="resetLink" to="/util">
-             INFO
-          </Link>
-        </li>
+       {user ? (
+          <>
+            <li>|</li>
+            <li>
+              <Link className="resetLink" to="/util">
+                INFO
+              </Link>
+            </li>
+            <li>|</li>
+            <li>
+              <Link className="resetLink" to="/notice">
+                NOTICE
+              </Link>
+            </li>
+          </>
+        ) : (
+          ""
+        )}
       </ul>
     </div>
   );
