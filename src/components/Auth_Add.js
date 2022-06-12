@@ -46,8 +46,8 @@ const Auth_Add = ({
           setLevel(e.target.value);
         }}
       >
-        <option className="inputForm" value="Level 1">
-          Level 1
+        <option className="inputForm" value="Part 1">
+          Part 1
         </option>
         <option className="inputForm" value="Level 2">
           Level 2
