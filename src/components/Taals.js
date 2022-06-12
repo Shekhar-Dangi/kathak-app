@@ -3,6 +3,7 @@ import "./Header.css";
 import "./Body.css";
 import List from "./List";
 import MainNavbar from "./MainNavbar";
+import { Link } from "react-router-dom";
 
 const Taals = () => {
   return (
@@ -14,7 +15,7 @@ const Taals = () => {
       <main>
         <h2 className="heading">What are Taals?</h2>
         <p className="paragraph">
-          Heavily used in Kathak dance, taals are various patterns of beats.
+          Heavily used in Kathak dance, <Link to="/theory#taal" >taals</Link> are various patterns of beats.
           These taals are also used in other classical Indian dance forms as
           well as classical Indian singing (Carnatic singing).{" "}
         </p>

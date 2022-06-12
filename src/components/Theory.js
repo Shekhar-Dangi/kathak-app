@@ -5,8 +5,6 @@ import MainNavbar from "./MainNavbar";
 const Theory = () => {
   return (
     <div>
-      
-      
       <div className="header">
         <h1>THEORY</h1>
       </div>
@@ -332,9 +330,9 @@ Taali: <br />
 Taali means clapping. Besides Sum the other beats in Tal on which we clap are called Tali. 
 </p>
 
-<p className="paragraph">
-Tal: <br />
-Tal is a group of certain beats. Tal is a very important concept in Classical Indian dance and music.
+<p className="paragraph" id="taal">
+Taal: <br />
+Taal is a group of certain beats. Taal is a very important concept in Classical Indian dance and music.
 </p>
 
 <p className="paragraph">

@@ -22,6 +22,7 @@ import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { auth, db } from "./firebase";
 
 import { collection, doc, query } from "firebase/firestore";
+import Notice from "./components/Notice";
 
 function App() {
   const [user, loading] = useAuthState(auth);
@@ -41,7 +42,7 @@ function App() {
         <Route exact path="/exam-prep" element={<Exam />} />
         <Route exact path="/auth" element={<Auth />} />
         <Route exact path="/theory" element={<Theory />} />
-        <Route exact path="/slider" element={<Slider />} />
+        <Route exact path="/notice" element={<Notice />} />
         <Route
           exact
           path="/util"
