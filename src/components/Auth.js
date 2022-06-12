@@ -110,7 +110,7 @@ const Auth = ({isSignUp,setIsSignUP}) => {
             <p className="small login_footer" onClick={toggle}>
               {isSignUp
                 ? "Already have an account? Login"
-                : "Need an account? Signup"}
+                : "Need an account? Sign Up"}
             </p>
           </div>
         </div>
