@@ -29,8 +29,8 @@ const Auth_Add = ({
         <option className="inputForm" value="Lasva Fine Arts">
           Lasva Fine Arts
         </option>
-        <option className="inputForm" value="Not Applicable">
-          Not Applicable
+        <option className="inputForm" value="Kathak Academy(default)">
+          Kathak Academy(default)
         </option>
       </select>
       <label className="normal" for="level">
