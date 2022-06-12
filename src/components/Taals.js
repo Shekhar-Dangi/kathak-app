@@ -25,22 +25,11 @@ const Taals = () => {
           Asama vs Teentaal - Sama)
         </p>
         <h2 className="heading">Various Taals</h2>
+  
         <List
           heading="Dadra Taal"
           list={[
-            "7 matras",
-            "3 Bibhags of 3-2-2 matras",
-            "1 Taali, 3 Khalis",
-            "Starts with Khali at 1st matra(doesn’t have som)",
-            "Taalis are at 4th and 6th matra",
-            "Asama Bibhag Taal",
-            "Theka: Ti Ti Na / Dhi Na / Dhi Na / Ti (0 2 3 0)",
-          ]}
-        />
-        <List
-          heading="Dadra Tall"
-          list={[
-            "6 mantras",
+            "6 matras",
             "2 Bibhags of 3-3 matras",
             "1 Taali and 1 Khali",
             "Taali at 1st matra(som)",
@@ -52,9 +41,9 @@ const Taals = () => {
         <List
           heading="Rupak Taal"
           list={[
-            "7 mantras",
+            "7 matras",
             "3 Bibhags of 3-2-2 matras",
-            "1 Taali and 3 Khali",
+            "1 Taali and 3 Khalis",
             "Starts with Khali at 1st matra(doesn’t have som)",
             "Taalis are at 4th and 6th matra",
             "Asama Bibhag Taal",
@@ -66,7 +55,7 @@ const Taals = () => {
           list={[
             "7 matras",
             "3 Bibhags of 3-2-2 matras",
-            "3 Taalis, 0 Khalis",
+            "3 Taalis and 0 Khalis",
             "Taalis are at 1st, 4th, and 6th matras",
             "Asama Bibhag Taal",
             "Theka: Dha Den Ta / Titah Kata / Gadi Ghene / Dha (x 2 3 x)",
