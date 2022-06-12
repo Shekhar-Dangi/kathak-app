@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <TopNavbar />
-      <Auth />
+      
       <Routes>
         <Route
           exact

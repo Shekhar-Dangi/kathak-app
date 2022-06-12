@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
@@ -6,12 +6,13 @@ import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
 import { query, collection } from "firebase/firestore";
 import { db } from "../firebase";
+import Auth from "./Auth";
 const TopNavbar = () => {
   const [user] = useAuthState(auth);
   const [room, loading] = useCollection(
     user && query(collection(db, user.email))
   );
-  // console.log(room.docs[0].data().school);
+  const [isSignUp, setIsSignUp] = useState(false);
   let dropped = false;
   const show = (compClass) => {
     const elem = document.querySelector(`.${compClass}`);
@@ -24,6 +25,7 @@ const TopNavbar = () => {
   console.log(room);
   return (
     <>
+      <Auth isSignUp={isSignUp} setIsSignUP={setIsSignUp} />
       <nav className="navbar">
         {user ? (
           <div className="dropdown">
@@ -56,17 +58,32 @@ const TopNavbar = () => {
               <i className="fa-solid fa-bars userDetails_icon"></i>
             </div>
           ) : (
-            <li>
-              <a
-                className="resetLink"
-                onClick={() => {
-                  show("modal-container");
-                }}
-                href="#"
-              >
-                SIGN UP
-              </a>
-            </li>
+            <>
+              <li>
+                <a
+                  className="resetLink"
+                  onClick={() => {
+                    setIsSignUp(true);
+                    show("modal-container");
+                  }}
+                  href="#"
+                >
+                  SIGN UP
+                </a>
+              </li>
+              <li>
+                <a
+                  className="resetLink"
+                  onClick={() => {
+                    setIsSignUp(false);
+                    show("modal-container");
+                  }}
+                  href="#"
+                >
+                  SIGN IN
+                </a>
+              </li>
+            </>
           )}
         </ul>
       </nav>

@@ -5,8 +5,8 @@ import { signIn, signUp, authGoogle } from "../firebase/auth";
 import RedirectAuth from "./RedirectAuth";
 import Auth_Add from "./Auth_Add";
 
-const Auth = () => {
-  const [isSignUp, setIsSignUP] = useState(false);
+const Auth = ({isSignUp,setIsSignUP}) => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [roomName, setRoomName] = useState("Tarana Dance Academy");
