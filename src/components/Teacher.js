@@ -7,6 +7,7 @@ import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { collection, doc } from "firebase/firestore";
+import { deleteField } from "../firebase/task";
 
 const Teacher = () => {
   const [user] = useAuthState(auth);
@@ -42,7 +43,17 @@ const Teacher = () => {
             <ul>
               {cla?.data()?.data?.length > 0 ? (
                 cla?.data()?.data?.map((doc) => {
-                  return <li>{doc}</li>;
+                  return (
+                    <li>
+                      <i
+                        onClick={() => {
+                          deleteField(user.email, "class", doc);
+                        }}
+                        class="fa-solid fa-xmark delete"
+                      />
+                      {doc}
+                    </li>
+                  );
                 })
               ) : (
                 <p className="paragraph">Nothing here!</p>
@@ -55,7 +66,17 @@ const Teacher = () => {
               <ul>
                 {paym?.data()?.data?.length > 0 ? (
                   paym?.data()?.data?.map((doc) => {
-                    return <li>{doc}</li>;
+                    return (
+                      <li>
+                        <i
+                          onClick={() => {
+                            deleteField(user.email, "paym", doc);
+                          }}
+                          class="fa-solid fa-xmark delete"
+                        />
+                        {doc}
+                      </li>
+                    );
                   })
                 ) : (
                   <p className="paragraph">Nothing here!</p>
@@ -67,7 +88,17 @@ const Teacher = () => {
               <ul>
                 {lesson?.data()?.data?.length > 0 ? (
                   lesson?.data()?.data?.map((doc) => {
-                    return <li>{doc}</li>;
+                    return (
+                      <li>
+                        <i
+                          onClick={() => {
+                            deleteField(user.email, "lesson", doc);
+                          }}
+                          class="fa-solid fa-xmark delete"
+                        />
+                        {doc}
+                      </li>
+                    );
                   })
                 ) : (
                   <p className="paragraph">Nothing here!</p>

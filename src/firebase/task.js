@@ -7,12 +7,18 @@ import {
   collection,
   updateDoc,
   arrayUnion,
+  arrayRemove,
 } from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const updateField = async (email, action, text) => {
   const d = doc(db, email, action);
   await updateDoc(d, { data: arrayUnion(text) });
+};
+
+const deleteField = async (email, action, text) => {
+  const d = doc(db, email, action);
+  await updateDoc(d, { data: arrayRemove(text) });
 };
 
 const createProperties = async (email, student) => {
@@ -28,4 +34,4 @@ const createProperties = async (email, student) => {
   }
 };
 
-export { createProperties, updateField };
+export { createProperties, updateField, deleteField };
