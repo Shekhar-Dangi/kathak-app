@@ -34,7 +34,7 @@ const Auth_Add = ({
         </option>
       </select>
       <label className="normal" for="level">
-        Select a school:
+        Select a level:
       </label>
 
       <select
@@ -49,12 +49,21 @@ const Auth_Add = ({
         <option className="inputForm" value="Part 1">
           Part 1
         </option>
-        <option className="inputForm" value="Level 2">
-          Level 2
+        <option className="inputForm" value="Part 2">
+          Part 2
         </option>
-        <option className="inputForm" value="Level 3">
-          Level 3
+        <option className="inputForm" value="Part 3">
+          Part 3
         </option>
+        <option className="inputForm" value="Junior Diploma">
+          Junior Diploma
+        </option>
+        <option className="inputForm" value="Senior Diploma 1">
+          Senior Diploma 1
+        </option>
+        <option className="inputForm" value="Senior Diploma 2">
+          Senior Diploma 2
+        </option> 
       </select>
       <label className="normal" for="role">
         Select a role:
