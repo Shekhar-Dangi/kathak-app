@@ -12,7 +12,7 @@
 }
 .top_container i {
   margin: 0 10px;
-  color: black;
+  color: red;
 }
 .top_container i:hover {
   cursor: pointer;
