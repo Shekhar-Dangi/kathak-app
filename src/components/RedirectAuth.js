@@ -3,6 +3,7 @@ import { addStudent } from "../firebase/school";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
 import Auth_Add from "./Auth_Add";
+import { createProperties } from "../firebase/task";
 
 const RedirectAuth = ({
   role,
@@ -18,6 +19,7 @@ const RedirectAuth = ({
       return;
     }
     await addStudent(roomName, user.email, level, role);
+    createProperties(user.email, role === "Student");
     document.querySelector(".moreDet").style.display = "none";
   };
   return (

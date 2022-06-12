@@ -4,13 +4,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
-import { query, collection } from "firebase/firestore";
+import { query, collection, where, doc } from "firebase/firestore";
 import { db } from "../firebase";
 import Auth from "./Auth";
 const TopNavbar = () => {
   const [user] = useAuthState(auth);
-  const [room, loading] = useCollection(
-    user && query(collection(db, user.email))
+  const [room, loading] = useDocument(
+    user && query(doc(db, user.email, "info"))
   );
   const [isSignUp, setIsSignUp] = useState(false);
   let dropped = false;
@@ -22,7 +22,7 @@ const TopNavbar = () => {
     console.log(prop);
     elem.style.display = prop;
   };
-  console.log(room);
+
   return (
     <>
       <Auth isSignUp={isSignUp} setIsSignUP={setIsSignUp} />
@@ -31,9 +31,9 @@ const TopNavbar = () => {
           <div className="dropdown">
             <ul>
               <li>{user.email}</li>
-              <li>{room?.docs[0]?.data()?.school}</li>
-              <li>{room?.docs[0]?.data()?.level}</li>
-              <li>{room?.docs[0]?.data()?.role}</li>
+              <li>{room?.data()?.school}</li>
+              <li>{room?.data()?.level}</li>
+              <li>{room?.data()?.role}</li>
               <li
                 onClick={() => {
                   signOut(auth);

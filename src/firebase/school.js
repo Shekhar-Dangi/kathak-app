@@ -1,4 +1,10 @@
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import {
+  collection,
+  setDoc,
+  addDoc,
+  doc,
+  serverTimestamp,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
 export const addStudent = async (roomName, email, level, role) => {
@@ -12,14 +18,13 @@ export const addStudent = async (roomName, email, level, role) => {
         role,
       }
     );
-    const docRef2 = await addDoc(collection(db, email), {
+    const docRef2 = await setDoc(doc(db, email, "info"), {
       school: roomName,
       joinedAt: serverTimestamp(),
       level,
       role,
     });
-    console.log("Document written with ID: ", docRef.id);
-    console.log("Document written with ID: ", docRef2.id);
+
   } catch (e) {
     console.error("Error adding document: ", e);
   }

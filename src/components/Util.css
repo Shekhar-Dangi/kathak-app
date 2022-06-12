@@ -1,0 +1,32 @@
+.top_container {
+  display: flex;
+  width: 97%;
+  margin: auto;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.middle_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.first_container,
+.bottom_container,
+.middle1,
+.middle2 {
+  border-radius: 48px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  margin: 10px;
+  max-height: 60%;
+  overflow-y: scroll;
+  scrollbar-width: 0px;
+}
+
+.first_container::-webkit-scrollbar,
+.bottom_container::-webkit-scrollbar,
+.middle1::-webkit-scrollbar,
+.middle2::-webkit-scrollbar{
+  width: 0px;
+}

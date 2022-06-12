@@ -35,3 +35,18 @@
   width: fit-content;
   margin: 10px auto;
 }
+.btn-add {
+  margin: 10px;
+  float: right;
+  font-size: 1.8rem;
+  border: 1px solid white;
+  padding: 10px 23px;
+  border-radius: 10px;
+  background: #42a342;
+  color: white;
+  cursor: pointer;
+}
+.btn-add:hover {
+  background-color: white;
+  color: #42a342;
+}

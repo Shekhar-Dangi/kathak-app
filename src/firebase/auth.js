@@ -8,6 +8,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { createProperties } from "./task";
 
 export const signUp = async (email, password, roomName, level, role) => {
   let user;
@@ -17,6 +18,8 @@ export const signUp = async (email, password, roomName, level, role) => {
       user = creds.user;
       console.log(user);
       await addStudent(roomName, email, level, role);
+      createProperties(user.email, role === "Student");
+
       document.querySelector(".modal-container").style.display = "none";
     })
     .catch((err) => {

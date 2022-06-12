@@ -109,3 +109,10 @@ select {
   padding-top: 50px;
   border: none;
 }
+.form_modal{
+    margin: 25px 12px;
+    border-radius: 81px;
+    padding: 20px;
+    border-radius: 81px;
+    padding: 20px
+}
