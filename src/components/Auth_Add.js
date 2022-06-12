@@ -64,6 +64,9 @@ const Auth_Add = ({
         <option className="inputForm" value="Senior Diploma 2">
           Senior Diploma 2
         </option> 
+        <option className="inputForm" value="Not applicable(if you are a teacher)">
+          Not applicable(if you are a teacher)
+        </option> 
       </select>
       <label className="normal" for="role">
         Select a role:
