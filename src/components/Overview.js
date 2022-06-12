@@ -32,7 +32,7 @@ const Overview = () => {
           within the dances <br />
           <strong>During the Raj</strong> - Kathak began to decline in this time
           as British rule began in India. The British administrators thought
-          Kathak was unruly and had seductive motation. Rise of Kathak - Kathak
+          Kathak was unruly and had seductive motions. Rise of Kathak - Kathak
           began to rise under Pt. Thakyr Prasad Ji. It was reintroduced under
           the name of Nathawari Nritya. <br />
           <strong>Today</strong> - Kathak is now regonized as one of the 8
