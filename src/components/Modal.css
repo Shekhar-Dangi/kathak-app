@@ -31,9 +31,14 @@
 }
 
 label,
-input {
+input,
+select {
   display: block;
   margin: 6px 0;
+}
+select {
+  background-color: #8a5623;
+  color: white;
 }
 .inputForm {
   width: 100%;
@@ -77,11 +82,11 @@ input {
   padding: 10px;
   border-radius: 10px;
 }
-.login_footer:hover{
+.login_footer:hover {
   background-color: white;
   color: #a6442d;
 }
-.modal-container {
+.modal-container, .moreDet {
   display: none;
   position: fixed;
   top: 0;
@@ -99,7 +104,7 @@ input {
 .modal::-webkit-scrollbar-track {
   background-color: gray;
 }
-.modal_image{
+.modal_image {
   background-color: #a6442d;
   padding-top: 50px;
   border: none;

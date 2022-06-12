@@ -8,6 +8,9 @@
   height: 7vh;
   border-bottom: 2px solid white;
 }
+.navbar {
+  position: relative;
+}
 .mainNavbar > ul {
   display: flex;
   justify-content: center;
@@ -27,16 +30,42 @@
 .mainNavbar a {
   font-size: 2rem;
 }
-.userDetails{
+.userDetails {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  justify-content: center;
 }
-.userDetails p, .userDetails i{
+.userDetails p,
+.userDetails i {
   margin: 0 10px;
   font-size: 1.6rem;
 }
-.userDetails i:hover{
+.userDetails i:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+.userDetails_icon {
+  font-size: 16px;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 7vh;
+  background: #a6442d;
+  padding: 20px;
+  width: fit-content;
+  z-index: 99;
+}
+.dropdown li {
+  padding: 10px;
+  border-bottom: 1px solid white;
+  cursor: pointer;
+}
+.dropdown li:hover {
+  border-bottom: 1px solid gray;
+}
+.dropdown ul {
+  padding: 0;
 }

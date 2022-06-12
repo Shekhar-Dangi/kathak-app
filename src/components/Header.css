@@ -7,7 +7,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  position: relative;
+  z-index: -1;
 }
 .header h1 {
   font-size: 5.5rem;
@@ -36,6 +37,6 @@
   position: relative;
   top: -6px;
 }
-.home{
+.home {
   height: 93vh;
 }
