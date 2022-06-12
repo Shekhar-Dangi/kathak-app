@@ -38,7 +38,7 @@ const Auth = () => {
             }}
           ></i>
           <div className="form">
-            <h2 className="heading">{isSignUp ? "SIGN UP" : "Sign In"}</h2>
+            <h2 className="heading">{isSignUp ? "SIGN UP" : "Login"}</h2>
             <form action="">
               <label className="normal" htmlFor="email">
                 email
